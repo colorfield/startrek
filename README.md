@@ -7,10 +7,10 @@ Star Trek-ify your Drupal!
 
 ### Featuring
 
-**Captain Kirk** as the mighty User 1
-**Miss Uhura** as the Translation System Specialist
-**Mister Scotty** as the Login and Logout Engineer
-**Mister Spock** as the Logging System Scientific Advisor
+- **Captain Kirk** as the mighty User 1
+- **Miss Uhura** as the Translation System Specialist
+- **Mister Scotty** as the Login and Logout Engineer
+- **Mister Spock** as the Logging System Scientific Advisor
 
 ## Roadmap
 
