@@ -1,0 +1,10 @@
+services:
+  startrek.yaml_parser:
+    class: Drupal\startrek\StarTrekParserYAML
+    arguments: []
+#  @todo implement CrewSubscriber
+#  startrek.crew_subscriber:
+#    class: Drupal\startrek\EventSubscriber\CrewSubscriber
+#    arguments: ['@entity_type.manager', '@authentication', '@current_user']
+#    tags:
+#      - { name: event_subscriber }

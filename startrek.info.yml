@@ -1,0 +1,5 @@
+name: Star Trek
+type: module
+description: To boldly go where no man has gone before
+core: 8.x
+package: Novelty

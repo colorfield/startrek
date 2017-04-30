@@ -1,0 +1,92 @@
+entity_type: startrek
+bundle: quote
+content:
+  quote_1:
+    type: 'login'
+    body:
+      value: '<p>Space… the final frontier.</p>'
+      format: full_html
+
+  quote_2:
+    type: 'login'
+    body:
+      value: '<p>I like to believe that there are always possibilities.</p>'
+      format: full_html
+
+  quote_3:
+    type: 'login'
+    body:
+      value: '<p>Random chance seems to have operated in our favor.</p>'
+      format: full_html
+
+  quote_4:
+    type: 'login'
+    body:
+      value: '<p>For everything, there is a first time.</p>'
+      format: full_html
+
+  quote_5:
+    type: 'login'
+    body:
+      value: '<p>To boldly go where no man has gone before.</p>'
+      format: full_html
+
+  quote_6:
+    type: 'login'
+    body:
+      value: '<p>Unbelievable. Do you recognize those uniforms?</p>'
+      format: full_html
+
+  quote_7:
+    type: 'login'
+    body:
+      value: '<p>Computer, compute to the last digit the value of pi.</p>'
+      format: full_html
+
+  quote_8:
+    type: 'login'
+    body:
+      value: '<p>A dream that became a reality and spread throughout the stars.</p>'
+      format: full_html
+
+  quote_9:
+    type: 'login'
+    body:
+      value: '<p>Lieutenant, you are looking at the only man to beat the no-win scenario.</p>'
+      format: full_html
+
+  quote_10:
+    type: 'login'
+    body:
+      value: '<p>Live long and prosper.</p>'
+      format: full_html
+
+  quote_11:
+    type: 'logout'
+    body:
+      value: '<p>Let’s see what’s out there.</p>'
+      format: full_html
+
+  quote_12:
+    type: 'logout'
+    body:
+      value: '<p>Do you know the old Klingon proverb that revenge is a dish best served cold? It is very cold — in space.</p>'
+      format: full_html
+
+  quote_13:
+    type: 'logout'
+    body:
+      value: '<p>Hours instead of days! Now, we have minutes instead of hours.</p>'
+      format: full_html
+
+  quote_14:
+    type: 'logout'
+    body:
+      value: '<p>Set Phasers To Stun.</p>'
+      format: full_html
+
+  quote_15:
+    type: 'logout'
+    body:
+      value: '<p>Live long and prosper.</p>'
+      format: full_html

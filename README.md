@@ -1,7 +1,16 @@
 # Star Trek
 
-> Don't let them promote you. Don't let them transfer you. Don't let them do anything that takes you off the bridge of that ship because while you're there, you can make a difference. 
+Star Trek-ify your Drupal!
+
+> Don't let them promote you. Don't let them transfer you. Don't let them do anything that takes you off the bridge of that ship because while you're there, you can make a difference.
 – James T. Kirk, 2371
+
+### Featuring
+
+**Captain Kirk** as the mighty User 1
+**Miss Uhura** as the Translation System Specialist
+**Mister Scotty** as the Login and Logout Engineer
+**Mister Spock** as the Logging System Scientific Advisor
 
 ## Roadmap
 

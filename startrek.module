@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Contains startrek.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function startrek_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the startrek module.
+    case 'help.page.startrek':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('To boldly go where no man has gone before!') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_user_login().
+ *
+ * @param $account
+ */
+function startrek_user_login($account) {
+  if($account->hasPermission('onboard enterprise')) {
+    // Parse the quotes file
+    $parser = \Drupal::service('startrek.yaml_parser');
+    $modulePath = drupal_get_path('module', 'startrek');
+    $yamlPath = $modulePath . '/content/startrek.quote.yml';
+    $parsedFile = $parser->parse($yamlPath);
+    $availableQuotes = [];
+    if(!empty ($parsedFile['content'])) {
+      foreach ($parsedFile['content'] as $quote) {
+        if($quote['type'] == 'login') {
+          $availableQuotes[] = $quote;
+        }
+      }
+      // Pick a random quote and display it.
+      $key = array_rand($availableQuotes, 1);
+      $quote = $availableQuotes[$key]['body']['value'];
+      $markup = \Drupal\Core\Render\Markup::create($quote);
+      drupal_set_message(render($markup));
+    }
+  }
+}
+
+/**
+ * Implements hook_user_logout().
+ *
+ * @param $account
+ */
+function startrek_user_logout($account) {
+  //drupal_set_message('User logout');
+}
