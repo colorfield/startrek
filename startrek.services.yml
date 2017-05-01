@@ -2,6 +2,10 @@ services:
   startrek.yaml_parser:
     class: Drupal\startrek\StarTrekParserYAML
     arguments: []
+  startrek.enterprise.message:
+    class: Drupal\startrek\EnterpriseMessage
+    arguments: ['@renderer', '@entity_type.manager', '@startrek.yaml_parser']
+
 #  @todo implement CrewSubscriber
 #  startrek.crew_subscriber:
 #    class: Drupal\startrek\EventSubscriber\CrewSubscriber

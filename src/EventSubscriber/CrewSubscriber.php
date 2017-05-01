@@ -5,7 +5,6 @@ namespace Drupal\startrek\EventSubscriber;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Session\AccountInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\EventDispatcher\Event;
 use Drupal\Core\Authentication\AuthenticationManager;
 use Symfony\Component\HttpKernel\Event\PostResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -50,8 +49,7 @@ class CrewSubscriber implements EventSubscriberInterface {
   }
 
   /**
-   * This method is called whenever the kernel.terminate event is
-   * dispatched.
+   * Called whenever the kernel.terminate event i dispatched.
    *
    * @param \Symfony\Component\HttpKernel\Event\PostResponseEvent $event
    *   The event to process.
@@ -63,7 +61,7 @@ class CrewSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  static function getSubscribedEvents() {
+  static public function getSubscribedEvents() {
     drupal_set_message('getSubscribedEvents');
     $events[KernelEvents::TERMINATE][] = ['enterpriseSetMessage'];
     return $events;

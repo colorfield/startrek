@@ -2,7 +2,9 @@
 
 Star Trek-ify your Drupal!
 
-> Don't let them promote you. Don't let them transfer you. Don't let them do anything that takes you off the bridge of that ship because while you're there, you can make a difference.
+> Don't let them promote you. Don't let them transfer you. 
+Don't let them do anything that takes you off the bridge of that ship 
+because while you're there, you can make a difference.
 – James T. Kirk, 2371
 
 ### Featuring

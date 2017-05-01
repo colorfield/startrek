@@ -1,0 +1,11 @@
+startrek.styling:
+  version: VERSION
+  css:
+    component:
+      css/startrek.module.css: { media: screen }
+  js:
+    js/startrek.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

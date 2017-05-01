@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default theme implementation of Enterprise message.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the container element.
+ * - message: HTML formatted message.
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes }}>
+  {% if message %}
+    {{ message }}
+  {% endif %}
+</div>

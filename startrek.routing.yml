@@ -1,0 +1,8 @@
+
+startrek.default_controller_test:
+  path: 'test'
+  defaults:
+    _controller: '\Drupal\startrek\Controller\DefaultController::test'
+    _title: 'test'
+  requirements:
+    _permission: 'access content'

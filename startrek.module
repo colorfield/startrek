@@ -25,37 +25,27 @@ function startrek_help($route_name, RouteMatchInterface $route_match) {
 
 /**
  * Implements hook_user_login().
- *
- * @param $account
  */
 function startrek_user_login($account) {
-  if($account->hasPermission('onboard enterprise')) {
-    // Parse the quotes file
-    $parser = \Drupal::service('startrek.yaml_parser');
-    $modulePath = drupal_get_path('module', 'startrek');
-    $yamlPath = $modulePath . '/content/startrek.quote.yml';
-    $parsedFile = $parser->parse($yamlPath);
-    $availableQuotes = [];
-    if(!empty ($parsedFile['content'])) {
-      foreach ($parsedFile['content'] as $quote) {
-        if($quote['type'] == 'login') {
-          $availableQuotes[] = $quote;
-        }
-      }
-      // Pick a random quote and display it.
-      $key = array_rand($availableQuotes, 1);
-      $quote = $availableQuotes[$key]['body']['value'];
-      $markup = \Drupal\Core\Render\Markup::create($quote);
-      drupal_set_message(render($markup));
-    }
+  if ($account->hasPermission('onboard enterprise')) {
+    \Drupal::service('startrek.enterprise.message')->setLoginMessage();
   }
 }
 
 /**
  * Implements hook_user_logout().
- *
- * @param $account
  */
 function startrek_user_logout($account) {
-  //drupal_set_message('User logout');
+  // drupal_set_message('User logout');.
+}
+
+/**
+ * Implements hook_theme().
+ */
+function startrek_theme() {
+  return [
+    'message' => [
+      'variables' => ['image' => NULL, 'message' => [], 'attributes' => []],
+    ],
+  ];
 }

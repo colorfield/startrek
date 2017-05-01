@@ -1,0 +1,21 @@
+/**
+ * @file
+ * Default styling for startrek module.
+ *
+ * @todo rtl styles
+ */
+
+/* @todo add context */
+#page .messages--status {
+  background: #1d1e1e url("../images/starfleet_command.png") no-repeat 10px 10px;
+  min-height: 130px;
+  box-shadow: -8px 0 0 #00b0ff;
+  border-color: #00b0ff #00b0ff #00b0ff transparent;
+  color: #fefefe;
+  padding: 10px 20px 10px 150px;
+}
+
+.enterprise-message {
+  font-size: larger;
+  margin-top: 20px;
+}

@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\startrek\StarTrekParserYAML.
- */
-
 namespace Drupal\startrek;
 
 use Drupal\Component\Serialization\Yaml;
@@ -12,14 +7,14 @@ use Drupal\Component\Serialization\Exception\InvalidDataTypeException;
 use Drupal\Core\Extension\InfoParserException;
 
 /**
- * Class StarTrekParserYAML
+ * Class StarTrekParserYAML.
  *
  * @package Drupal\startrek
  */
 class StarTrekParserYAML implements StarTrekParserInterface {
 
   /**
-   * @inheritdoc
+   * {@inheritdoc}
    */
   public function parse($filename, array $replacements = []) {
     if (!file_exists($filename)) {
@@ -35,7 +30,8 @@ class StarTrekParserYAML implements StarTrekParserInterface {
         }
 
         $parsed_info = Yaml::decode($content);
-      } catch (InvalidDataTypeException $e) {
+      }
+      catch (InvalidDataTypeException $e) {
         throw new InfoParserException("Unable to parse $filename " . $e->getMessage());
       }
       $missing_keys = array_diff($this->getRequiredKeys(), array_keys($parsed_info));
@@ -56,4 +52,5 @@ class StarTrekParserYAML implements StarTrekParserInterface {
   protected function getRequiredKeys() {
     return array('entity_type', 'bundle', 'content');
   }
+
 }
